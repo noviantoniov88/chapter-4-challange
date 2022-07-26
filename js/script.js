@@ -86,13 +86,13 @@ const hompimpa = (pilihanPlayer) => {
 }
 
 const playerWin = () => {
-    document.getElementById("versusInfo").innerHTML = 'PLAYER 1 <br> Menang';
+    document.getElementById("versusInfo").innerHTML = 'PLAYER 1 <br> WIN';
     document.getElementById("versusInfo").classList.remove('versus-state');
     document.getElementById("versusInfo").classList.add('versus-state-playwin');
 }
 
 const comWin = () => {
-    document.getElementById("versusInfo").innerHTML = 'COMPUTER <br> Menang';
+    document.getElementById("versusInfo").innerHTML = 'COMPUTER <br> WIN';
     document.getElementById("versusInfo").classList.remove('versus-state');
     document.getElementById("versusInfo").classList.add('versus-state-comwin');
 }
