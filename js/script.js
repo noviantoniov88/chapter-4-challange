@@ -16,37 +16,37 @@ let playerLoseTxt = 'COM WIN';
 let draWTxt = 'DRAW';
 
 const pilihBatu = () => {
-    console.log('pilih Batu');
+    // console.log('pilih Batu');
     pilihanPlayer('batu');
     hompimpa('batu');
 }
 
 const pilihKertas = () => {
-    console.log('pilih Kertas');
+    // console.log('pilih Kertas');
     pilihanPlayer('kertas');
     hompimpa('kertas');
 }
 
 const pilihGunting = () => {
-    console.log('pilih Gunting');
+    // console.log('pilih Gunting');
     pilihanPlayer('gunting');
     hompimpa('gunting');
 }
 
 const resetGame = () => {
-    console.log('Reset Game');
+    // console.log('Reset Game');
     pilihanPlayer('reset');
     pilihanCom('reset');
 }
 
 const hompimpa = (pilihanPlayer) => {
-    console.log('hompimpa');
+    // console.log('hompimpa');
     let number = Math.floor(Math.random() * 10)
     let idxPilihanCom = number % comp.length; 
     let pilihanComp = comp[idxPilihanCom];
-    console.log(number);
-    console.log(idxPilihanCom);
-    console.log(pilihanComp);
+    // console.log(number);
+    // console.log(idxPilihanCom);
+    // console.log(pilihanComp);
     if( pilihanPlayer == 'batu'){
         if( pilihanComp == 'batu' ){
             pilihanCom('batu');
@@ -103,6 +103,14 @@ const playerComDraw = () => {
     document.getElementById("versusInfo").classList.add('versus-state-draw');
 }
 
+const resetResult = () => {
+    document.getElementById("versusInfo").innerHTML = '<span>VS</span>';
+    document.getElementById("versusInfo").classList.remove('versus-state-playwin');
+    document.getElementById("versusInfo").classList.remove('versus-state-comwin');
+    document.getElementById("versusInfo").classList.remove('versus-state-draw');
+    document.getElementById("versusInfo").classList.add('versus-state');
+}
+
 // comWin();
 
 const pilihanPlayer = (rps) =>{
@@ -112,7 +120,7 @@ const pilihanPlayer = (rps) =>{
     let batuCom = $("#batuCom")
     let kertasCom = $("#kertasCom")
     let guntingCom = $("#guntingCom");
-    console.log(rps);
+    // console.log(rps);
     if(rps == 'batu'){
         batuPlayer.addClass( "start-state-selected" );
         batuPlayer.removeClass( "start-state" );
@@ -147,6 +155,7 @@ const pilihanPlayer = (rps) =>{
         kertasCom.removeClass( "start-state" );
         guntingCom.removeClass( "start-state-selected" );
         guntingCom.removeClass( "start-state" );
+        resetResult()
     }
 }
 
@@ -154,7 +163,7 @@ const pilihanCom = (rpsCom) =>{
     let batuCom = $("#batuCom")
     let kertasCom = $("#kertasCom")
     let guntingCom = $("#guntingCom");
-    console.log(rpsCom);
+    // console.log(rpsCom);
     if(rpsCom == 'batu'){
         batuCom.addClass( "start-state-selected" );
         batuCom.removeClass( "start-state" );
