@@ -72,7 +72,7 @@ const hompimpa = (pilihanPlayer) => {
     }else if( pilihanPlayer == 'gunting' ) {
         if( pilihanComp == 'batu' ){
             pilihanCom('batu');
-            playerWin();
+            comWin();
         }else if( pilihanComp == 'kertas' ){
             pilihanCom('kertas');
             playerWin();
