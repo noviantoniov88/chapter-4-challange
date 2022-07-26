@@ -88,18 +88,24 @@ const hompimpa = (pilihanPlayer) => {
 const playerWin = () => {
     document.getElementById("versusInfo").innerHTML = 'PLAYER 1 <br> WIN';
     document.getElementById("versusInfo").classList.remove('versus-state');
+    document.getElementById("versusInfo").classList.remove('versus-state-comwin');
+    document.getElementById("versusInfo").classList.remove('versus-state-draw');
     document.getElementById("versusInfo").classList.add('versus-state-playwin');
 }
 
 const comWin = () => {
     document.getElementById("versusInfo").innerHTML = 'COMPUTER <br> WIN';
     document.getElementById("versusInfo").classList.remove('versus-state');
+    document.getElementById("versusInfo").classList.remove('versus-state-playwin');
+    document.getElementById("versusInfo").classList.remove('versus-state-draw');
     document.getElementById("versusInfo").classList.add('versus-state-comwin');
 }
 
 const playerComDraw = () => {
     document.getElementById("versusInfo").innerHTML = '<span>D R A W</span>';
     document.getElementById("versusInfo").classList.remove('versus-state');
+    document.getElementById("versusInfo").classList.remove('versus-state-playwin');
+    document.getElementById("versusInfo").classList.remove('versus-state-comwin');
     document.getElementById("versusInfo").classList.add('versus-state-draw');
 }
 
